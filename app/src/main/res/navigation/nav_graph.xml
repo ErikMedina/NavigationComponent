@@ -12,38 +12,55 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_secondFragment"
-            app:destination="@id/navigation" />
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fourthFragment"
+            app:destination="@id/fourthFragment" />
     </fragment>
-    <navigation android:id="@+id/navigation"
-        app:startDestination="@id/secondFragment">
-        <fragment
-            android:id="@+id/secondFragment"
-            android:name="com.erikmedina.navigationcomponent.SecondFragment"
-            android:label="fragment_second"
-            tools:layout="@layout/fragment_second">
-            <action
-                android:id="@+id/action_secondFragment_to_thirdFragment"
-                app:destination="@id/navigation2" />
-        </fragment>
-        <navigation android:id="@+id/navigation2"
-            app:startDestination="@id/thirdFragment">
-            <fragment
-                android:id="@+id/thirdFragment"
-                android:name="com.erikmedina.navigationcomponent.ThirdFragment"
-                android:label="fragment_third"
-                tools:layout="@layout/fragment_third">
-                <action
-                    android:id="@+id/action_thirdFragment_to_fourthFragment"
-                    app:destination="@id/fourthFragment" />
-                <deepLink
-                    android:id="@+id/deepLink"
-                    app:uri="app://thirdFragment" />
-            </fragment>
-            <fragment
-                android:id="@+id/fourthFragment"
-                android:name="com.erikmedina.navigationcomponent.FourthFragment"
-                android:label="fragment_fourth"
-                tools:layout="@layout/fragment_fourth" />
-        </navigation>
-    </navigation>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.erikmedina.navigationcomponent.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.erikmedina.navigationcomponent.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third">
+        <action
+            android:id="@+id/action_thirdFragment_to_fourthFragment"
+            app:destination="@id/fourthFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:popUpTo="@id/secondFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="com.erikmedina.navigationcomponent.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth">
+        <action
+            android:id="@+id/action_fourthFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment"
+            app:popUpTo="@id/thirdFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
 </navigation>

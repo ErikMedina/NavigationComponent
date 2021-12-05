@@ -1,15 +1,12 @@
 package com.erikmedina.navigationcomponent
 
-import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -41,6 +38,12 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         view.findViewById<Button>(R.id.button1).setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_secondFragment)
+        )
+        view.findViewById<Button>(R.id.button2).setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_thirdFragment)
+        )
+        view.findViewById<Button>(R.id.button3).setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_fourthFragment)
         )
         return view
     }
