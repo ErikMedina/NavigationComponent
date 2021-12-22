@@ -37,13 +37,13 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         view.findViewById<Button>(R.id.button1).setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_secondFragment)
+            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_firstFragment)
         )
         view.findViewById<Button>(R.id.button2).setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_thirdFragment)
+            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_secondFragment)
         )
         view.findViewById<Button>(R.id.button3).setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_fourthFragment)
+            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_thirdFragment)
         )
         return view
     }

@@ -8,26 +8,26 @@
     tools:context=".HomeFragment">
 
     <TextView
+        style="@style/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:text="Home fragment" />
+        android:text="@string/home_fragment_name" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:text="Second fragment" />
+        android:text="@string/home_fragment_button_first_name" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:text="Third fragment" />
+        android:text="@string/first_fragment_button_name" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:text="Fourth fragment" />
+        android:text="@string/second_fragment_button_name" />
 </LinearLayout>

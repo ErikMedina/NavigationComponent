@@ -5,18 +5,18 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".SecondFragment">
+    tools:context=".FirstFragment">
 
     <TextView
         style="@style/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/second_fragment_name" />
+        android:text="@string/first_fragment_name" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:text="@string/second_fragment_button_name" />
+        android:text="@string/first_fragment_button_name" />
 
 </LinearLayout>

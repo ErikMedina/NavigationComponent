@@ -4,12 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,11 +35,8 @@ class ThirdFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_third, container, false)
-        view.findViewById<Button>(R.id.button1).setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_thirdFragment_to_fourthFragment)
-        )
-        return view
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_third, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

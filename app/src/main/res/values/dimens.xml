@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_width">200dp</dimen>
+    <dimen name="title">24sp</dimen>
+    <dimen name="margin">30dp</dimen>
+</resources>
