@@ -44,9 +44,7 @@
             app:destination="@id/thirdFragment" />
         <action
             android:id="@+id/action_secondFragment_to_firstFragment"
-            app:destination="@id/firstFragment"
-            app:popUpTo="@id/firstFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/firstFragment" />
     </fragment>
 
     <fragment
@@ -55,9 +53,7 @@
         tools:layout="@layout/fragment_third">
         <action
             android:id="@+id/action_thirdFragment_to_secondFragment"
-            app:destination="@id/secondFragment"
-            app:popUpTo="@id/secondFragment"
-            app:popUpToInclusive="true" />
+            app:destination="@id/secondFragment" />
     </fragment>
 
 </navigation>
